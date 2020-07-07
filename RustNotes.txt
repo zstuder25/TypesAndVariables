@@ -1,0 +1,66 @@
+Rust Notes
+
+Representation of Data
+- In computing we care about storing and transferring data
+- Different types of data we may want to transfer
+    - Boolean
+    - Ints/decimals
+    - Text
+    - Structured data(HTML, XML, JSON)
+    - Binary data
+- Programming languages help us work with these formats
+
+Two Types of Computing
+- Electronic systems fall into 2 categories: analogue and digital
+- Analogue systems use current to represent data
+- Digital systems use pulses to encode data
+    - Communication using a stream of 0s and 1s
+    - Each piece of information is called a bit
+    - We can store bits in memory (RAM, SSD) or transmit them
+- Modern computers are primarily digital
+
+Bits
+- A single bit is the smallest pice of data in a digital system
+- It can be either 0 or 1, so it can store anything that only has 2 options
+- A single bit is not enough to encode a number or piece of text
+
+Multiple bits
+- A single bit can encode 2 states but 2 bits can encode 4 states
+- Generally speaking, N bits allow us to encode 2^N states
+
+Bytes
+- The most common value of N is 8, which allows us to encode 256 states
+- Represent every single symbol in a latin-based alphabet
+- Byte is not ideal to represent foreign languages
+- Store a whole number in the range [-128, 127]
+
+
+How to use the bits?
+- Use the bits to store whole non-negative numbers (unsigned)
+- Use them to store whole (signed, possibly negative) numbers
+
+Platform-Specific Types
+- CPUs and processes have bitness
+    - E.g, 32 bit CPU, 64-bit CPU
+- This fitness puts a limit on range of memory you can access
+    - So a 32-bit process can only use up to 4Gb ram
+- Many programming languages provide platform-specific integer types
+    - Size of the data depends on the platform you’re targeting
+- These types are useful when you need a general-purpose integer value or need to access an array element
+
+Floating-Point Numbers
+- Used to store non-whole values
+- There are 2 data types
+    - 32-bit (also called ‘float’ or ‘single-precision’)
+    - 64-bit( also called ‘double’, or ‘double-precision’)
+- Floating-point representation is standardized
+- FP numbers do not allow exact representation of numbers
+- Fps represent a range of special values: +- infinity, quiet/signaling, NaNs
+
+Stack and Heap
+- Stack
+    - Fast but size limited
+    - Short term storage
+- Heap
+    - Long term storage structure
+
